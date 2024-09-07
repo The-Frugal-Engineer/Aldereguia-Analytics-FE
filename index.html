@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart.js Example</title>
+    
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Import Chart.js and date adapter -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+
+    <style>
+      .chart-container {
+        width: 80vw;
+        height: 80vh;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Future results -->
+    <h2>Credentials</h2>
+    <input type="text" id="username" placeholder="username" value="dartfordmadrid">
+    <input type="text" id="password" placeholder="password" value="dartfordmadrid">
+
+    <h2>Simulate returns</h2>
+	<div class="grid-container">
+	<div style="text-align: left;" class="grid-item item-1">
+		<b><label>Select simulation type:</label></b>
+			<select name="Simulation" id="simulation_type">
+			  <option value="past">Past Simulation</option>
+			  <option value="future">Future Simulation</option>
+			</select>
+			<label>Monthly amount:</label>
+			<input type="text" id="amount" placeholder="Monthly amount" value="1000">
+			<label>Start Year (E.g. 2014)/:</label>
+			<label>Simulation years (E.g. 10):</label>
+			<input type="text" id="year" placeholder="Start Year" value="0">
+			<label>Initial investment:</label>
+			<input type="text" id="initial_investment" placeholder="0">
+			<label>Ticker:</label>
+			<select name="ticker" id="ticker"></select>
+			<button id="fetchDataButton">Fetch Data</button>
+	</div>
+		<div class="grid-item item-2">
+			
+
+			<div class="chart-container">
+			  <canvas id="myChart"></canvas>
+			</div>
+
+			<br>
+
+		</div>
+	<div class="grid-item item-3">
+		<b>Relevant KPIs</b>
+		<div class="kpi" id="last-value"></div>
+
+	</div>
+	</div>
+
+    <!-- Link to the external JS files -->
+    <script src="ChartManager.js"></script>
+    <script src="scripts.js"></script>
+    <script src="dropdowns.js"></script>
+  </body>
+</html>
