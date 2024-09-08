@@ -13,10 +13,10 @@ class ChartManager {
         const year = document.getElementById('year').value;
         const ticker = document.getElementById('ticker').value;
 		const simulation_type = document.getElementById('simulation_type').value;
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
-        const credentials = btoa(`${username}:${password}`);
+
 		const initial_investment = document.getElementById('initial_investment').value;
+		//Get the JWT from the local storage
+		const token = localStorage.getItem('access_token');
         const jsonbody = {
             amount: amount,
             year: year,
@@ -30,7 +30,7 @@ class ChartManager {
         fetch(url, {
             method: 'POST',
             headers: {
-                'Authorization': `Basic ${credentials}`,
+                'Authorization': `Bearer ${token}`,
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(jsonbody)
