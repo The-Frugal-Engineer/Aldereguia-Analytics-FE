@@ -96,10 +96,19 @@ class ChartManager {
 		
 		/*CALCULATE KPIs*/
 		var lastPosition = values[values.length - 1];
+		var totalInvested = values2[values2.length - 1];
+		var benefit=lastPosition-totalInvested;
+		var benefitPercentage = benefit/totalInvested *100;
 		// Set the last element in the HTML
 		lastPosition = parseFloat(lastPosition).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+		totalInvested = parseFloat(totalInvested).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+		benefit = parseFloat(benefit).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+		benefitPercentage = benefitPercentage.toFixed(2);
 
 		document.getElementById('last-value').textContent = `Total Position: ${lastPosition}`;
+		document.getElementById('invested').textContent = `Total Invested: ${totalInvested}`;
+		document.getElementById('benefit').textContent = `Total gains: ${benefit}`;
+		document.getElementById('benefitPercentage').textContent = `Percentage total gains: ${benefitPercentage} %`;
 		
     }
 }

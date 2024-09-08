@@ -7,6 +7,8 @@ const tickers = [
     { value: "^RUT", text: "^RUT - Russell 2000 Index (Index)" },
     { value: "^FTSE", text: "^FTSE - FTSE 100 Index (Index)" },
     { value: "^N225", text: "^N225 - Nikkei 225 Index (Index)" },
+	{ value: "^IBEX", text: "^IBEX - IBEX 35 Index (Equity Index)" }, 
+	{ value: "^IBEXTR", text: "^IBEXTR - IBEX 35 Total Return Index (Equity Index)" },
     { value: "SPY", text: "SPY - SPDR S&P 500 ETF Trust (ETF)" },
     { value: "QQQ", text: "QQQ - Invesco QQQ Trust (ETF)" },
     { value: "VTI", text: "VTI - Vanguard Total Stock Market ETF (ETF)" },
@@ -33,6 +35,7 @@ const tickers = [
     { value: "BTC-USD", text: "BTC-USD - Bitcoin to US Dollar (Cryptocurrency)" },
     { value: "^TNX", text: "^TNX - US 10-Year Treasury Yield (Bond)" },
     { value: "^TYX", text: "^TYX - US 30-Year Treasury Yield (Bond)" }
+
 ];
 
 // Function to populate a dropdown with ticker options
