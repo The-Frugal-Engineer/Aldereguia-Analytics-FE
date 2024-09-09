@@ -25,7 +25,7 @@ class ChartManager {
 			initial_investment: initial_investment
         };
         
-        const url = `http://127.0.0.1:8080/calculations`;
+        const url = `https://flask-investment-simulator-2groyyujbq-uc.a.run.app/calculations`;
 
         fetch(url, {
             method: 'POST',
