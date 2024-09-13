@@ -1,13 +1,13 @@
 // scripts.js
-
 document.getElementById('loginForm').addEventListener('submit', async function(event) {
     event.preventDefault();
     
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
+
     try {
-        const response = await fetch('https://flask-investment-simulator-2groyyujbq-uc.a.run.app/login', {
+        const response = await fetch(apiUrlAAFE+'/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

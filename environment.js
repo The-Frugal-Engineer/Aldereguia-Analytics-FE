@@ -1,0 +1,1 @@
+const apiUrlAAFE = "https://flask-investment-simulator-2groyyujbq-uc.a.run.app";
