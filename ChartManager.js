@@ -10,6 +10,7 @@ class ChartManager {
 
     fetchData() {
         const amount = document.getElementById('amount').value;
+		const increase = document.getElementById('increase').value;
         const year = document.getElementById('year').value;
         const ticker = document.getElementById('ticker').value;
 		const simulation_type = document.getElementById('simulation_type').value;
@@ -19,6 +20,7 @@ class ChartManager {
 		const token = localStorage.getItem('access_token');
         const jsonbody = {
             amount: amount,
+			increase:increase,
             year: year,
             ticker: ticker,
 			simulation_type: simulation_type,

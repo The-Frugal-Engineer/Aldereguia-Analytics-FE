@@ -91,5 +91,16 @@ button:hover {
   font-weight: bold;
 }
 
+/* Same row for amount fields*/
 
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Space between the fields */
+  align-items: center;
+}
+
+.input-row input {
+  width: 100px; /* Adjust as needed */
+}
 
