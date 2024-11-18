@@ -65,8 +65,8 @@ class ChartManager {
                 datasets: [{
                     label: 'Total Position with Dividends',
                     data: values,
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(0, 128, 0, 1)',
+                    backgroundColor: 'rgba(0, 128, 0, 0.2)',
                     fill: false,
                     tension: 0.1
                 },
